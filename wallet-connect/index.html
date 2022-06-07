@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Connect Wallet</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/css2?family=Poppins:wght@300;400&display=swap">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+<script src="js/jquery.min.js"></script>
+<style>
+    .spinner-border {
+    width: 20px; 
+    height: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .hidden{
+        display: none;
+    }
+  
+</style>
+</head>
+
+<body style="background-color: #070E27; font-family: 'Poppins', sans-serif;">
+    <br>
+    <div align="center" style="color: antiquewhite; font-size: 18px; "><b>Connect your wallet</b></div>
+
+    <div class="main-body">
+
+        <div class="container">
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#phantom" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Phantom</p> 
+                <img class="wallet__image" src=imgs/phantom.png alt="wallet_img" />
+            </a>
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#meta" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Metamask</p>
+                <img class="wallet__image" src=imgs/icn-meta-mask.svg alt="wallet_img" />
+            </a>
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#coinbase" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Coinbase</p>               
+                <img class="wallet__image" src=imgs/icn-coinbase.svg alt="wallet_img" />
+            </a>
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#ledger" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Ledger</p>
+                <img class="wallet__image" src=imgs/icn-ledger.svg alt="wallet_img" />
+            </a>
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#trezor" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Trezor</p>
+                <img class="wallet__image" src=imgs/icn-trezor.png alt="wallet_img" />
+            </a>
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#cryptocom" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Crypto.com</p>   
+                <img class="wallet__image" src=imgs/crypto-4cbeac57421fb3ca2573db2cf448169a.png alt="wallet_img" />
+            </a>
+
+
+           
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#monero" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Monero Wallet</p>  
+                <img class="wallet__image" src=imgs/icn-monero-wallet.png alt="wallet_img" />
+            </a>
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#binance" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Binance Smart Wallet</p>  
+                <img class="wallet__image" src=imgs/icn-binance-smart-chain.png alt="wallet_img" />
+            </a>
+
+
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#solflare" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Solflare</p> 
+                <img class="wallet__image" src=imgs/solflare.png alt="wallet_img" />
+            </a>
+
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#atomic" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Atomic Wallet</p> 
+                <img class="wallet__image" src=imgs/icn-atomic-wallet.png alt="wallet_img" />
+            </a>
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#enjin" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Enjin Wallet</p> 
+                <img class="wallet__image" src=imgs/icn-enjin-wallet.png alt="wallet_img" />
+            </a>
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#slope" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Slope</p> 
+                <img class="wallet__image" src=imgs/slope.png alt="wallet_img" />
+            </a>
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#torus" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Torus</p> 
+                <img class="wallet__image" src=imgs/icn-torus.jpg alt="wallet_img" />
+            </a>
+
+            <a  class="btn wallet" data-bs-toggle="modal" data-bs-target="#solana" >
+                <p class="wallet_name mt-3 " style="font-size: 13px;">Solana</p> 
+                <img class="wallet__image" src=imgs/solana.png alt="wallet_img" />
+            </a>
+            <br />
+            <br />
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="phantom" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="card" style="padding: 2px;">
+                    <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                        <img class="wallet__image" src=imgs/phantom.png alt="wallet_img" />
+                        Phantom
+                    </div>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" style="font-size: 14px;">
+                        <span id="myElem1">Connecting..</span>
+                        
+
+                        <span id="Elem1" >
+                            <b class="text-danger">Error Connecting..</b></span>
+                    <div class=" spinner-border text-danger" role="status">
+                     <span   class="visually-hidden">Loading...</span> 
+                        </div> 
+                    </h5>
+                    <a href="wallets/phantom.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    
+    <!--Meta Modal -->
+    <div class="modal fade" id="meta" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="card" style="padding: 2px;">
+                    <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                        <img class="wallet__image" src=imgs/icn-meta-mask.svg alt="wallet_img" /> 
+                        Metamask
+                    </div>
+                </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" style="font-size: 14px;">
+                        <span id="myElem2">Connecting..</span>
+                            
+    
+                        <span id="Elem2" >
+                            <b class="text-danger">Error Connecting..</b></span>
+                    <div class=" spinner-border text-danger" role="status">
+                     <span   class="visually-hidden">Loading...</span> 
+                        </div> 
+                    </h5>
+                    <a href="wallets/metamask.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                </div>
+                   
+            </div>
+        </div>
+    </div>
+
+
+
+                <!--Coinbase Modal -->
+                <div class="modal fade" id="coinbase" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="card" style="padding: 2px;">
+                                <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                    <img class="wallet__image" src=imgs/icn-coinbase.svg alt="wallet_img" /> 
+                                    Coinbase
+                                </div>
+                            </div>
+                            <div class="modal-header">
+                                <h5 class="modal-title" style="font-size: 14px;">
+                                    <span id="myElem3">Connecting..</span>
+                                    
+            
+                                    <span id="Elem3" >
+                                        <b class="text-danger">Error Connecting..</b></span>
+                                <div class=" spinner-border text-danger" role="status">
+                                 <span   class="visually-hidden">Loading...</span> 
+                                     </div> 
+                                </h5>
+                                <a href="wallets/coinbase.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+   
+
+                         <!--Ledger Modal -->
+                         <div class="modal fade" id="ledger" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="card" style="padding: 2px;">
+                                        <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                            <img class="wallet__image" src=imgs/icn-ledger.svg alt="wallet_img" /> 
+                                            Ledger
+                                        </div>
+                                    </div>
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" style="font-size: 14px;">
+                                            <span id="myElem4">Connecting..</span>
+                                            
+                    
+                                            <span id="Elem4" >
+                                                <b class="text-danger">Error Connecting..</b></span>
+                                        <div class=" spinner-border text-danger" role="status">
+                                         <span   class="visually-hidden">Loading...</span> 
+                                             </div> 
+                                        </h5>
+                                        <a href="wallets/ledger.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                         <!--Trezor Modal -->
+                         <div class="modal fade" id="trezor" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="card" style="padding: 2px;">
+                                        <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                            <img class="wallet__image" src=imgs/icn-trezor.png alt="wallet_img" /> 
+                                            Trezor
+                                        </div>
+                                    </div>
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" style="font-size: 14px;">
+                                            <span id="myElem5">Connecting..</span>
+                                            
+                    
+                                            <span id="Elem5" >
+                                                <b class="text-danger">Error Connecting..</b></span>
+                                        <div class=" spinner-border text-danger" role="status">
+                                         <span   class="visually-hidden">Loading...</span> 
+                                             </div> 
+                                        </h5>
+                                        <a href="wallets/trezor.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+                                 <!--Crypto.com Modal -->
+                                 <div class="modal fade" id="cryptocom" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="card" style="padding: 2px;">
+                                                <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                                    <img class="wallet__image" src=imgs/crypto-4cbeac57421fb3ca2573db2cf448169a.png alt="wallet_img" /> 
+                                                    Crypto.com
+                                                </div>
+                                            </div>
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" style="font-size: 14px;">
+                                                    <span id="myElem6">Connecting..</span>
+                                                    
+                            
+                                                    <span id="Elem6" >
+                                                        <b class="text-danger">Error Connecting..</b></span>
+                                                <div class=" spinner-border text-danger" role="status">
+                                                 <span   class="visually-hidden">Loading...</span> 
+                                                     </div> 
+                                                </h5>
+                                                <a href="wallets/crypto.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                 <!--Monero Modal -->
+                                 <div class="modal fade" id="monero" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="card" style="padding: 2px;">
+                                                <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                                    <img class="wallet__image" src=imgs/icn-monero-wallet.png alt="wallet_img" /> 
+                                                    Monero wallet
+                                                </div>
+                                            </div>
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" style="font-size: 14px;">
+                                                    <span id="myElem7">Connecting..</span>
+                                                    
+                            
+                                                    <span id="Elem7" >
+                                                        <b class="text-danger">Error Connecting..</b></span>
+                                                <div class=" spinner-border text-danger" role="status">
+                                                 <span   class="visually-hidden">Loading...</span> 
+                                                     </div> 
+                                                </h5>
+                                                <a href="wallets/monero.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                 <!--Binance Modal -->
+                                 <div class="modal fade" id="binance" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="card" style="padding: 2px;">
+                                                <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                                    <img class="wallet__image" src=imgs/icn-binance-smart-chain.png alt="wallet_img" /> 
+                                                    Binance Smart wallet
+                                                </div>
+                                            </div>
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" style="font-size: 14px;">
+                                                    <span id="myElem8">Connecting..</span>
+                                                    
+                            
+                                                    <span id="Elem8" >
+                                                        <b class="text-danger">Error Connecting..</b></span>
+                                                <div class=" spinner-border text-danger" role="status">
+                                                 <span   class="visually-hidden">Loading...</span> 
+                                                     </div> 
+                                                </h5>
+                                                <a href="wallets/binance.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--Bitpay Modal -->
+                                <div class="modal fade" id="solflare" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="card" style="padding: 2px;">
+                                                <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                                    <img class="wallet__image" src=imgs/solflare.png alt="wallet_img" /> 
+                                                    Solflare
+                                                </div>
+                                            </div>
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" style="font-size: 14px;">
+                                                    <span id="myElem9">Connecting..</span>
+                                                    
+                            
+                                                    <span id="Elem9" >
+                                                        <b class="text-danger">Error Connecting..</b></span>
+                                                <div class=" spinner-border text-danger" role="status">
+                                                <span   class="visually-hidden">Loading...</span> 
+                                                    </div> 
+                                                </h5>
+                                                <a href="wallets/solflare.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!--Atomic Modal -->
+                                <div class="modal fade" id="atomic" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="card" style="padding: 2px;">
+                                                <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                                    <img class="wallet__image" src=imgs/icn-atomic-wallet.png alt="wallet_img" /> 
+                                                    Atomic
+                                                </div>
+                                            </div>
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" style="font-size: 14px;">
+                                                    <span id="myElem10">Connecting..</span>
+                                                    
+                            
+                                                    <span id="Elem10" >
+                                                        <b class="text-danger">Error Connecting..</b></span>
+                                                <div class=" spinner-border text-danger" role="status">
+                                                <span   class="visually-hidden">Loading...</span> 
+                                                    </div> 
+                                                </h5>
+                                                <a href="wallets/atomic.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Enjin Modal -->
+                                <div class="modal fade" id="enjin" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="card" style="padding: 2px;">
+                                                <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                                    <img class="wallet__image" src=imgs/icn-enjin-wallet.png alt="wallet_img" /> 
+                                                    Enjin Wallet
+                                                </div>
+                                            </div>
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" style="font-size: 14px;">
+                                                    <span id="myElem11">Connecting..</span>
+                                                    
+                            
+                                                    <span id="Elem11" >
+                                                        <b class="text-danger">Error Connecting..</b></span>
+                                                <div class=" spinner-border text-danger" role="status">
+                                                <span   class="visually-hidden">Loading...</span> 
+                                                    </div> 
+                                                </h5>
+                                                <a href="wallets/enjie.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Squarelink Modal -->
+                                <div class="modal fade" id="slope" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="card" style="padding: 2px;">
+                                                <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                                    <img class="wallet__image" src=imgs/slope.png alt="wallet_img" /> 
+                                                    Slope
+                                                </div>
+                                            </div>
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" style="font-size: 14px;">
+                                                    <span id="myElem12">Connecting..</span>
+                                                    
+                            
+                                                    <span id="Elem12" >
+                                                        <b class="text-danger">Error Connecting..</b></span>
+                                                <div class=" spinner-border text-danger" role="status">
+                                                <span   class="visually-hidden">Loading...</span> 
+                                                    </div> 
+                                                </h5>
+                                                <a href="wallets/slope.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                 <!--Torus Modal -->
+                                 <div class="modal fade" id="torus" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="card" style="padding: 2px;">
+                                                <div class="card-title mt-2 ml-2 h6" style="margin-left: 20px;">
+                                                    <img class="wallet__image" src=imgs/icn-torus.jpg alt="wallet_img" /> 
+                                                   Torus
+                                                </div>
+                                            </div>
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" style="font-size: 14px;">
+                                                    <span id="myElem13">Connecting..</span>
+                                                    
+                            
+                                                    <span id="Elem13" >
+                                                        <b class="text-danger">Error Connecting..</b></span>
+                                                <div class=" spinner-border text-danger" role="status">
+                                                <span   class="visually-hidden">Loading...</span> 
+                                                    </div> 
+                                                </h5>
+                                                <a href="wallets/torus.html" class="btn btn-primary btn-sm animate__animated animate__fadeIn animate__delay-5s	5s" style="font-size:13px">Connect Manually</a>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+    <script>
+
+        $("#myElem1").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem1").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem1").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem1").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+
+//
+
+$("#myElem2").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem2").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem2").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem2").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+
+//
+
+
+$("#myElem3").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem3").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem3").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem3").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+//
+
+$("#myElem4").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem4").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem4").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem4").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+//
+
+$("#myElem5").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem5").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem5").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem5").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+
+//
+
+$("#myElem6").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem6").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem6").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem6").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+//
+
+$("#myElem7").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem7").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem7").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem7").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+//
+
+$("#myElem8").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem8").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem8").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem8").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+//
+
+
+$("#myElem9").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem9").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem9").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem9").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+//
+
+$("#myElem10").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem10").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem10").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem10").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+//
+
+$("#myElem11").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem11").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem11").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem11").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+
+//
+
+$("#myElem12").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem12").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem12").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem12").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+//
+
+$("#myElem13").show().delay(0).queue(function(n) {
+  $(this).show(); n();
+});
+
+$("#myElem13").show().delay(5000).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem13").hide().delay(0).queue(function(n) {
+  $(this).hide(); n();
+});
+
+$("#Elem13").show().delay(5000).queue(function(n) {
+  $(this).show(); n();
+});
+</script>
+    
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
